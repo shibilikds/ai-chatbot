@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 219 65% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 219 65% 12%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 219 65% 12%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 174 100% 50%;
+    --primary-foreground: 219 65% 8%;
+
+    --secondary: 270 76% 53%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 219 65% 20%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 219 65% 20%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 219 65% 20%;
+    --input: 219 65% 20%;
+    --ring: 174 100% 50%;
+
+    --radius: 0.75rem;
+
+    /* Custom design tokens */
+    --gradient-bg: linear-gradient(180deg, hsl(219 65% 8%) 0%, hsl(219 50% 12%) 50%, hsl(180 50% 10%) 100%);
+    --glow-primary: 0 0 60px hsl(174 100% 50% / 0.3), 0 0 120px hsl(270 76% 53% / 0.2);
+    --glow-border: 0 0 20px hsl(174 100% 50% / 0.4);
+  }
+
+  .dark {
+    --background: 219 65% 8%;
+    --foreground: 210 40% 98%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter antialiased;
+    background: var(--gradient-bg);
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-xl border border-border rounded-xl;
+  }
+
+  .glow-icon {
+    filter: drop-shadow(0 0 20px hsl(174 100% 50% / 0.5)) 
+            drop-shadow(0 0 40px hsl(270 76% 53% / 0.3));
+  }
+
+  .nav-button {
+    @apply glass-card px-6 py-5 flex items-center justify-center gap-3 
+           transition-all duration-300 hover:border-primary/60 
+           hover:shadow-[var(--glow-border)] cursor-pointer;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-foreground via-foreground to-secondary bg-clip-text text-transparent;
+  }
+
+  .bot-message {
+    @apply glass-card p-4 rounded-2xl rounded-tl-sm;
+  }
+
+  .user-message {
+    @apply bg-primary/20 border border-primary/30 p-4 rounded-2xl rounded-tr-sm;
+  }
+
+  .floating-home {
+    @apply fixed bottom-6 right-6 w-14 h-14 rounded-full 
+           bg-gradient-to-br from-primary/20 to-secondary/20 
+           border border-primary/40 backdrop-blur-xl
+           flex items-center justify-center
+           transition-all duration-300 hover:scale-110 hover:shadow-[var(--glow-border)];
+  }
+}
+
+@layer utilities {
+  .grid-overlay {
+    background-image: 
+      linear-gradient(to right, hsl(215 20% 40% / 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(215 20% 40% / 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    /* mask-image removed so child content (buttons) doesn't fade out */
+  }
+}
+
+/* Animation classes */
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.animate-fade-in-up-delay-1 {
+  animation: fadeInUp 0.5s ease-out 0.1s forwards;
+  opacity: 0;
+}
+
+.animate-fade-in-up-delay-2 {
+  animation: fadeInUp 0.5s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
