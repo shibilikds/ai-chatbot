@@ -9,7 +9,7 @@ interface MainMenuProps {
 const MainMenu = ({ onNavigate }: MainMenuProps) => {
   const menuItems = [
     { icon: Trophy, label: "Know Results", view: "results" },
-    { icon: Users, label: "Team Status", view: "leaderboard" },
+    { icon: Users, label: "Programme Status", view: "leaderboard" },
     { icon: School, label: "Off-Campus", view: "off-campus-menu" },
     { icon: BookOpen, label: "Learn More", view: "learn-more" },
     { icon: Download, label: "Downloads", view: "downloads" },
@@ -47,12 +47,10 @@ const MainMenu = ({ onNavigate }: MainMenuProps) => {
         {/* Website Link */}
         <div className="flex justify-center animate-fade-in-up-delay-2">
           <a
-            href="https://consoulium.sabicofficial.in"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="https://consoulium.sabicofficial.in/admin.html"
             className="glass-card px-8 py-4 flex items-center gap-3 hover:border-primary/60 hover:shadow-[var(--glow-border)] transition-all duration-300"
           >
-            <span className="font-poppins font-medium text-foreground">Visit Our Website</span>
+            <span className="font-poppins font-medium text-foreground">Back to Website</span>
             <ExternalLink size={18} className="text-primary" />
           </a>
         </div>

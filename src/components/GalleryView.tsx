@@ -9,7 +9,7 @@ interface GalleryViewProps {
 
 const GalleryView = ({ onBack, onHome, isOffCampus = false }: GalleryViewProps) => {
   const url = isOffCampus 
-    ? "https://offcampus.festie.app/gallery"
+    ? "https://consouium.festie.app/gallery"
     : "https://consouium.festie.app/gallery";
 
   const title = isOffCampus ? "Off-Campus Gallery" : "Event Gallery";

@@ -9,7 +9,7 @@ interface DownloadsViewProps {
 
 const DownloadsView = ({ onBack, onHome, isOffCampus = false }: DownloadsViewProps) => {
   const url = isOffCampus 
-    ? "https://offcampus.festie.app/downloads"
+    ? "https://consouium.festie.app/downloads"
     : "https://consouium.festie.app/downloads";
 
   const title = isOffCampus ? "Off-Campus Downloads" : "Downloads";

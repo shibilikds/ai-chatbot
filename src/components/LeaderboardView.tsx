@@ -12,7 +12,7 @@ const LeaderboardView = ({ onBack, onHome, isOffCampus = false }: LeaderboardVie
     ? "https://offcampus.festie.app/results/leaderboard?headless=true"
     : "https://consouium.festie.app/results/leaderboard?headless=true";
 
-  const title = isOffCampus ? "Off-Campus Team Status Leaderboard" : "Team Status Leaderboard";
+  const title = isOffCampus ? "Off-Campus Programme Status" : "Programme Status";
 
   return (
     <PageLayout title={title} onBack={onBack} onHome={onHome}>
@@ -22,7 +22,7 @@ const LeaderboardView = ({ onBack, onHome, isOffCampus = false }: LeaderboardVie
             {title}
           </h2>
           <p className="text-muted-foreground font-inter">
-            Check out the current team rankings below. Please note this is a preview only!
+            Check out the programme rankings below.
           </p>
           <div className="rounded-lg overflow-hidden border border-border">
             <iframe

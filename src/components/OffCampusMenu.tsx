@@ -12,7 +12,7 @@ interface OffCampusMenuProps {
 const OffCampusMenu = ({ onNavigate, onBack, onHome }: OffCampusMenuProps) => {
   const menuItems = [
     { icon: Trophy, label: "Know Results", view: "off-campus-results" },
-    { icon: Users, label: "Team Status", view: "off-campus-leaderboard" },
+    { icon: Users, label: "Programme Status", view: "off-campus-leaderboard" },
     { icon: Download, label: "Downloads", view: "off-campus-downloads" },
     { icon: Image, label: "Gallery", view: "off-campus-gallery" },
   ];
