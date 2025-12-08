@@ -28,7 +28,7 @@ const MainMenu = ({ onNavigate }: MainMenuProps) => {
             Consoulium Event Bot
           </h1>
           <p className="text-muted-foreground font-inter">
-            Bukari Dawa College – 2025
+            Bukhari Dawa College – 2025
           </p>
         </div>
 
