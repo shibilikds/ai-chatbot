@@ -22,7 +22,7 @@ const LearnMoreView = ({ onBack, onHome }: LearnMoreViewProps) => {
             About Consoulium 2025
           </h2>
           <p className="text-muted-foreground font-inter leading-relaxed">
-            Consoulium is the annual literary and cultural festival of Bukari Dawa College. 
+            Consoulium is the annual literary and cultural festival of Bukhari Dawa College. 
             This bot is your personal guide to the event.
           </p>
           <p className="text-muted-foreground font-inter leading-relaxed">
